@@ -1,0 +1,334 @@
+:root{
+    --green: #2E6F40;
+    --black: #130f40;
+    --light-color: #666;
+    --white: #FAF9F6;
+    --box-shadow: 0 .1rem 1rem rgba(0,0,0.1);
+    --border: 2rem solid rgba(0,0,0.1);
+    --outline: .1rem solid rgba(0,0,0.1);
+}
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #214b2d;
+    padding: 1em;
+    color: var(--white);
+}
+/* Brand styling */
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding:  0 150px;
+}
+/* Navbar Menu Styling */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    padding: 0 150px;
+}
+.navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+}
+/* Toggle Button (Hamburger Icon) Styling */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.navbar-toggle span {
+    background-color: white;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+.mirror-services{
+    padding: 100px 200px;
+    justify-content: center;
+    align-items: center;
+    color: #214b2d;
+}
+.mirror-cleaning-container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.mirror-cleaning-container .main-content{
+    width: 70%;
+}
+.mirror-cleaning-container .main-content img{
+    height: 400px;
+    width: 100%;
+    padding-bottom: 15px;
+}
+.plant{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.mirror-cleaning-container .main-content .plant-img img{
+    width: 250px;
+    height: 250px;
+}
+.mirror-cleaning-container .main-content h1, .mirror-cleaning-container .main-content p{
+    padding: 10px 0;
+    width: 100%;
+}
+.mirror-cleaning-container .main-content p{
+    color: gray;
+}
+.tick{
+    color: #214b2d;
+}
+.mirror-cleaning-container .side{
+    width: 30%;
+}
+.search-container {
+    background: #f5f7f5;
+    padding: 30px 15px;
+    width: 300px;
+    border-radius: 5px;
+}
+.search-container h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #214b2d;
+    padding: 15px 0;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: #666;
+}
+.search-box button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+}
+.search-box button:hover {
+    color: #214b2d;
+}
+.all-services-container{
+    background: #f5f7f5;
+    padding: 30px 25px;
+    width: 300px;
+    border-radius: 5px;
+}
+.category-box{
+    background-color: #214b2d;
+    color: whitesmoke;
+    height: 50px;
+    margin: 20px 0;
+}
+.category-box h3{
+    padding: 10px;
+}
+.contact-container{
+    background-color: #214b2d;
+    width: 300px;
+    color: whitesmoke;
+    padding: 50px;
+}
+.contact-container p{
+    padding: 10px 0;
+}
+.cleaning-excellence{
+    display: flex;
+    flex-direction: row;
+}
+.cleaning-excellence .excellence-content{
+    width: 50%;
+    background-color: whitesmoke;
+    padding: 50px;
+    color: #214b2d;
+}
+.excellence-content h1{
+    font-weight: bolder;
+    font-size: 50px;
+}
+.excellence-content p{
+    color: gray;
+    padding: 10px 0;
+}
+.check{
+    color:#214b2d;
+}
+.team-btn button{
+    padding: 10px 20px;
+    background-color: #214b2d;
+    color: whitesmoke;
+    border-radius: 25px;
+    font-weight: bolder;
+}
+.cleaning-excellence .image{
+    width: 50%;
+}
+.cleaning-excellence .image img{
+    width: 100%;
+    height: 100%;
+}
+.help{
+    padding: 100px;
+    color: #214b2d;
+    font-weight: bolder;
+    background-image: url("deep-house-cleaning.png");
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+}
+.help h3{
+    font-size: 30px;
+}
+.help h1{
+    font-size: 50px;
+}
+.foot{
+    background-color:#f6f4f3;
+    padding: 30px;
+    justify-content: center;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    gap: 100px;
+    font-weight: bolder;
+}
+.footer h3{
+    color:#214b2d;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 0;
+}
+.footer a, .footer p{
+    color: var(--black);
+    text-align: center;
+}
+.footer a:hover{
+    color: red;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+.clients{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+@media (max-width:768px){
+    /* Hide the menu by default on small screens */
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color:var(--green);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    .navbar-menu li {
+        margin: 0.5em 0;
+    }
+    /* Show the toggle button */
+    .navbar-toggle {
+        display: flex;
+    }
+    /* Display the menu when active */
+    .navbar-menu.active {
+        display: flex;
+    }
+    .navbar-brand{
+        padding: 0 20px;
+    }
+    .mirror-services{
+        padding: 10px 50px;
+    }
+    .mirror-cleaning-container, .plant, .cleaning-excellence,  .clients{
+        flex-direction: column;
+    }
+    .mirror-cleaning-container .main-content, .mirror-cleaning-container .side,  .cleaning-excellence .image{
+        width: 100%;
+    }
+    .mirror-cleaning-container{
+        gap: 10px;
+    }
+    .search-container, .all-services-container, .contact-container{
+        padding: 15px;
+        width: 250px;
+    }
+    .search-box input{
+        height: 20px;
+    }
+    .mirror-cleaning-container .main-content img{
+        height: 250px;
+    }
+    .mirror-cleaning-container .main-content .plant-img, .team-btn{
+        text-align: center;
+    }
+    .cleaning-excellence .excellence-content{
+        width: 100%;
+        padding: 25px;
+    }
+    .excellence-content h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .help{
+        padding: 20px;
+    }
+    .help h3{
+        font-size: 15px;
+    }
+    .help h1{
+        font-size: 20px;
+    }
+    .foot{
+        padding: 0;
+        align-items: center;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px;
+    }
+}

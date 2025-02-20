@@ -1,0 +1,489 @@
+:root{
+    --green: #2E6F40;
+    --black: #130f40;
+    --light-color: #666;
+    --white: #FAF9F6;
+    --box-shadow: 0 .1rem 1rem rgba(0,0,0.1);
+    --border: 2rem solid rgba(0,0,0.1);
+    --outline: .1rem solid rgba(0,0,0.1);
+}
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--green);
+    padding: 1em;
+    color: var(--white);
+}
+/* Brand styling */
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 150px;
+}
+/* Navbar Menu Styling */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    padding: 0 150px;
+}
+.navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+}
+/* Toggle Button (Hamburger Icon) Styling */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.navbar-toggle span {
+    background-color: white;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
+}
+body{
+    color: var(--white);
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+a:hover{
+    color: red;
+}
+.main-banner{
+    background-color: #17432a;
+    height: 550px;
+}
+.about{
+    position: relative;
+    top: -450px;
+    left: 170px;
+}
+.about h1{
+    font-weight: bolder;
+    font-size: 50px;
+}
+.about h4, i{
+    font-weight: bolder;
+}
+.bubble{
+    position: absolute;
+    top: 300px;
+    left: 350px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 25px rgba(255,255,255,0.25);
+    animation: animate 5s ease-in-out infinite;
+}
+@keyframes animate{
+    0%,100%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+.bubble:nth-child(2){
+    position: relative;
+    top: 50px;
+    left: 500px;
+    width: 50px;
+    height: 50px;
+    animation: ani 5s ease-in-out infinite;
+}
+@keyframes ani{
+    0%,100%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+}
+.bubble:nth-child(3){
+    position: relative;
+    left: 700px;
+    width: 80px;
+    height: 80px;
+    animation: animated 6s ease-in-out infinite;
+}
+@keyframes animated{
+    0%,100%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+}
+.bubble span{
+    position: absolute;
+    border-radius: 50%;
+}
+.bubble span:nth-child(1){
+    inset: 2px;
+    border-left: 1px solid var(--white);
+    filter: blur(2px);
+}
+.bubble span:nth-child(2){
+    inset: 2px;
+    border-right: 1px solid var(--white);
+    filter: blur(2px);
+}
+.image img{
+    width: 550px;
+    height: 550px;
+    position: relative;
+    top: -130px;
+    right: -64%;
+    border-top-left-radius: 50%;
+}
+.container-fluid{
+    margin-top: 150px;
+}
+.aboutus{
+    margin: 50px 0;
+    background-color: var(--white);
+}
+.aboutus img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 100px;
+}
+.portfolio, .payment{
+    padding: 50px 0;
+    text-align: center;
+    color: #2E6F40;
+}
+.portfolio .main-heading h4, .payment .main-heading h4{
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    margin-bottom: 15px;
+}
+.portfolio h1, .payment h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.payment{
+    background-color: whitesmoke;
+}
+.cards-container, .team-container, .payment-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 30px 150px;
+}
+.card{
+    width: 280px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-size: cover;
+}
+.payment-container .card{
+    height: 450px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #0d6835;
+    color: white;
+    padding: 15px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-content h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+.arrow-button {
+    background: #ff6b00;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+.arrow-button:hover, .payment-container button:hover {
+    background: #d45500;
+}
+.payment-container .payment-btn{
+    margin: 25px 0;
+    background-color: #196c3d;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+.payment-container .booking-btn{
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #17432a;
+}
+.payment-container p{
+    color: gray;
+}
+.payment-container .tick{
+    color: rgb(22, 55, 22);
+}
+.payment-container .facilities{
+    text-align: left;
+    padding: 15px;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+.about-content{
+    background-color: #17432a;
+    padding: 50px;
+    width: 50%;
+}
+.about-content h4{
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    margin-bottom: 10px;
+}
+.about-content h1{
+    font-weight: bolder;
+    margin: 15px 0;
+}
+.about-image img{
+    width: 100%;
+}
+.about-content button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #17432a;
+    font-weight: bolder;
+}
+.about-content button:hover{
+    background-color: #d45500;
+    color: whitesmoke;
+}
+.team{
+    background-color: whitesmoke;
+    color: #17432a;
+    padding: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.team-heading h4{
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    margin-bottom: 20px
+}
+.team-heading h1{
+    font-weight: bolder;
+}
+.service-images{
+    background-color: #17432a;
+    padding: 70px 50px;
+}
+.services-container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.services-container img{
+    border: 1px solid gray;
+}
+.foot{
+    background-color:#f6f4f3;
+    padding: 30px;
+    justify-content: center;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    gap: 100px;
+    font-weight: bolder;
+}
+.footer h3{
+    color:#214b2d;
+    font-weight: bolder;
+    text-align: center;
+}
+.footer a, .footer p{
+    color: var(--black);
+    text-align: center;
+}
+.footer a:hover{
+    color: red;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 768px) {
+    /* Hide the menu by default on small screens */
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color:var(--green);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    .navbar-menu li {
+        margin: 0.5em 0;
+    }
+    /* Show the toggle button */
+    .navbar-toggle {
+        display: flex;
+    }
+    /* Display the menu when active */
+    .navbar-menu.active {
+        display: flex;
+    }
+    .navbar-brand{
+        padding: 0 20px;
+    }
+    .main-banner{
+        height: 250px;
+    }
+    .about{
+        position: relative;
+        top: -150px;
+        left: 15px;
+    }
+    .about h4{
+        font-size: 10px;
+    }
+    .about h1{
+        font-size: 30px;
+    }
+    .bubble{
+        width: 50px;
+        height: 50px;
+        top: 150px;
+        left: 50px;
+    }
+    .bubble:nth-child(2){
+        width: 30px;
+        height: 30px;
+        left: 150px;
+    }
+    .bubble:nth-child(3){
+        top: 50px;
+        left: 150px;
+    }
+    .portfolio h1,  .team-heading h1{
+        font-size: 30px;
+    }
+    .image img{
+        width: 150px;
+        height: 150px;
+        top: -70px;
+        left: 180px;
+        border-radius: 50%;
+    }
+    .cards-container{
+        flex-direction: column;
+        padding: 10px 40px;
+    }
+    .team-container, .about-container, .services-container{
+        flex-direction: column;
+        padding: 5px;
+    }
+    .payment{
+        padding: 50px;
+    }
+    .payment-container{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .payment-container .card{
+        width: 220px;
+        height: 400px;
+    }
+    .team-container{
+        padding: 15px 10px;
+    }
+    .team-container .card{
+        width: 250px;
+        height: 300px;
+    }
+    .foot{
+        padding: 0;
+        align-items: center;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px;
+    }
+    .about-content{
+        width: 100%;
+    }
+}
+
+
+
+
